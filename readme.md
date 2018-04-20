@@ -1,4 +1,4 @@
-# Earth-View-Wallaper:
+# Earth-View-Wallpaper:
 This project fetches Google's [Earth-View images](https://earthview.withgoogle.com/) and changes your desktop wallpaper every 15 minutes to a random one of them.
 
 
