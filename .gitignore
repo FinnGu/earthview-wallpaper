@@ -1,6 +1,10 @@
 # Excludes everchanging wallpaper
 **.jpg
 
+# py2app
+build
+dist
+
 # Created by https://www.gitignore.io/api/osx,python,windows
 
 ### OSX ###

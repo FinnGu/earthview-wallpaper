@@ -56,7 +56,7 @@ def get_last_number():
 # Load once on startup (probably only important for windows)
 set_downloaded_image_as_wallpaper()
 # and after that every 15 minutes
-schedule.every(15).minutes.do(fetch_and_set_random_wallpaper)
+schedule.every(5).seconds.do(fetch_and_set_random_wallpaper)
 
 while True:
     schedule.run_pending()

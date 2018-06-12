@@ -2,7 +2,7 @@
 This project fetches Google's [Earth-View images](https://earthview.withgoogle.com/) and changes your desktop wallpaper every 15 minutes to a random one of them.
 
 
-## Installation Guide:
+## Installation Guide (Windows):
 1. Clone this repository to your local machine
 2. Install the required dependencies by running `pip install -r requirements.txt` from the root of your cloned repository
 3. In "auto_change_wallpaper.bat" change path to "change_wallpaper.pyw"
@@ -15,7 +15,18 @@ This project fetches Google's [Earth-View images](https://earthview.withgoogle.c
 7. Your background should change after 15 minutes
 
 
+## Installation Guide (OS X):
+1. Clone this repository to your local machine
+2. Install the required dependencies by running `pip3 install -r requirements.txt` from the root of your cloned repository
+3. Build by running `python3 setup.py py2app`
+4. Move the app to your systems' application folder
+5. Set the app as Login Item
+    1. Go to System Preferences -> Users & Groups
+    2. Select your user on the left
+    3. Add as Login Item
+
+
 ## Open Tasks:
 * Change ALL desktops for OS X
-* Show as System Tray Icon
-* Allow user to change time interval from there
+* Easier setup for Windows
+* Handle network errors
