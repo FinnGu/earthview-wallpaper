@@ -4,6 +4,7 @@ import urllib.request
 import os
 import sys
 
+
 class ChangeWallpaper:
 
     @staticmethod
@@ -20,7 +21,8 @@ class ChangeWallpaper:
             last_number = ChangeWallpaper.get_last_number()
 
             if os.path.isfile(path_to_dir + "/wallpaper" + str(last_number) + ".jpg"):
-                os.system("osascript -e 'tell application \"System Events\" to set picture of every desktop to POSIX file \"" + path_to_dir + "/wallpaper" + str(last_number) + ".jpg\"'")
+                os.system("osascript -e 'tell application \"System Events\" to set picture of every desktop to POSIX file \"" +
+                          path_to_dir + "/wallpaper" + str(last_number) + ".jpg\"'")
 
     @staticmethod
     def fetch_and_set_random_wallpaper():
@@ -31,7 +33,8 @@ class ChangeWallpaper:
             random_img_url = content[random.randint(0, len(content) - 1)]
             next_number = ChangeWallpaper.get_last_number() + 1
 
-            urllib.request.urlretrieve(random_img_url, "wallpaper" + str(next_number) + ".jpg")
+            urllib.request.urlretrieve(
+                random_img_url, "wallpaper" + str(next_number) + ".jpg")
             ChangeWallpaper.delete_old_image()
 
         ChangeWallpaper.set_downloaded_image_as_wallpaper()
@@ -42,11 +45,13 @@ class ChangeWallpaper:
         previous_number = ChangeWallpaper.get_last_number() - 1
 
         if os.path.isfile(path_to_dir + "/wallpaper" + str(previous_number) + ".jpg"):
-            os.remove(path_to_dir + "/wallpaper" + str(previous_number) + ".jpg")
+            os.remove(path_to_dir + "/wallpaper" +
+                      str(previous_number) + ".jpg")
 
     @staticmethod
     def get_last_number():
-        numbers = [int(filename[9:][:-4]) for filename in os.listdir('.') if filename.startswith("wallpaper")]
+        numbers = [int(filename[9:][:-4])
+                   for filename in os.listdir('.') if filename.startswith("wallpaper")]
 
         if numbers:
             numbers.sort()

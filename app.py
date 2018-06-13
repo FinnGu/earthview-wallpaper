@@ -7,6 +7,7 @@ from change_wallpaper import ChangeWallpaper
 app = QApplication([])
 stopFlag = Event()
 
+
 class TimerThread(Thread):
 
     def __init__(self, event):
@@ -17,12 +18,15 @@ class TimerThread(Thread):
         while not self.stopped.wait(15.0 * 60.0):
             ChangeWallpaper.fetch_and_set_random_wallpaper()
 
+
 def next():
     ChangeWallpaper.fetch_and_set_random_wallpaper()
+
 
 def quit():
     stopFlag.set()
     app.quit()
+
 
 def main():
 
