@@ -19,7 +19,7 @@ This project fetches Google's [earthview images](https://earthview.withgoogle.co
 1. Clone this repository to your local machine
 2. Install the required dependencies by running `pip3 install -r requirements.txt` from the root of your cloned repository
 3. Build by running `python3 setup.py py2app`
-4. Move the app to your systems' application folder by running `mv dist/app.app ~/Applications/EarthviewWallpaper.app`
+4. Move the app to your systems' application folder by running `mv dist/app.app /Applications/EarthviewWallpaper.app`
 5. Set *EarthviewWallpaper* as Login Item
     1. Go to System Preferences -> Users & Groups
     2. Select your user on the left

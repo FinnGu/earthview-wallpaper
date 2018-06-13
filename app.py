@@ -1,3 +1,5 @@
+"""Main module of EarthviewWallpaper."""
+
 from threading import Thread, Event
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QSystemTrayIcon, QMenu, QAction
@@ -20,16 +22,17 @@ class TimerThread(Thread):
 
 
 def next():
+    """Callback of system tray action 'Next background' that changes the wallpaper to a random one."""
     ChangeWallpaper.fetch_and_set_random_wallpaper()
 
 
 def quit():
+    """Callback of system tray action 'Quit' that exits the app."""
     stopFlag.set()
     app.quit()
 
 
 def main():
-
     # Create the icon
     icon = QIcon("icon.icns")
 
@@ -44,13 +47,13 @@ def main():
     # Create the menu
     menu = QMenu()
 
-    actionNext = QAction("Next background")
-    actionNext.triggered.connect(next)
-    menu.addAction(actionNext)
+    action_next = QAction("Next background")
+    action_next.triggered.connect(next)
+    menu.addAction(action_next)
 
-    actionQuit = QAction("Quit")
-    actionQuit.triggered.connect(quit)
-    menu.addAction(actionQuit)
+    action_quit = QAction("Quit")
+    action_quit.triggered.connect(quit)
+    menu.addAction(action_quit)
 
     # Add the menu to the tray
     tray.setContextMenu(menu)
