@@ -5,6 +5,11 @@
 build
 dist
 
+# PyInstaller
+build
+dist
+*.spec
+
 # Created by https://www.gitignore.io/api/osx,python,windows
 
 ### OSX ###

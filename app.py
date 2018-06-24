@@ -4,6 +4,7 @@ from threading import Thread, Event
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QSystemTrayIcon, QMenu, QAction
 from change_wallpaper import ChangeWallpaper
+import sys
 
 
 app = QApplication([])
@@ -34,7 +35,10 @@ def quit():
 
 def main():
     # Create the icon
-    icon = QIcon("icon.icns")
+    if sys.platform.startswith("win32"):
+        icon = QIcon("icon.ico")
+    elif sys.platform.startswith("darwin"):
+        icon = QIcon("icon.icns")
 
     # Create the tray
     tray = QSystemTrayIcon()

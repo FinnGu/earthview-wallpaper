@@ -5,14 +5,13 @@ This project fetches Google's [earthview images](https://earthview.withgoogle.co
 ## Installation Guide (Windows):
 1. Clone this repository to your local machine
 2. Install the required dependencies by running `pip install -r requirements.txt` from the root of your cloned repository
-3. In "auto_change_wallpaper.bat" change path to "change_wallpaper.pyw"
-4. Create a [shortcut](https://www.computerhope.com/issues/ch000739.htm) to "auto_change_wallpaper.bat"
+3. Execute `pyinstaller --clean --noconsole --name EarthviewWallpaper --add-data="prettyearth.txt;." --add-data="icon.ico;." app.py` from the root of your cloned repository
+4. Create a [shortcut](https://www.computerhope.com/issues/ch000739.htm) to "/dist/EarthviewWallpaper/EarthviewWallpaper.exe"
 5. Move the shortcut into your systems' startup folder
     1. Press <kbd>WIN</kbd>+<kbd>R</kbd>
     2. Type "shell:startup" and hit <kbd>ENTER</kbd>
     3. Move the file
 6. Either execute the copied shortcut or restart your system
-7. Your background should change after 15 minutes
 
 
 ## Installation Guide (OS X):
@@ -28,6 +27,8 @@ This project fetches Google's [earthview images](https://earthview.withgoogle.co
 
 ## Open Tasks:
 * Change ALL desktops for OS X
-* Easier setup for Windows
 * Handle network errors
 * Check why OS X app is ~250MB
+
+## Credits:
+* Icon from https://icon-icons.com/icon/earth-globe/70179

@@ -56,8 +56,8 @@ class ChangeWallpaper:
     def get_last_number():
         """Searches current directory for images starting with 'wallpaper',
         succeeded by a number and returns the highest number of those."""
-        numbers = [int(filename[9:][:-4])
-                   for filename in os.listdir('.') if filename.startswith("wallpaper")]
+        wallpapers = [filename for filename in os.listdir(".") if filename.startswith("wallpaper")]
+        numbers = [int(wallpaper[9:][:-4]) for wallpaper in wallpapers]
 
         if numbers:
             numbers.sort()
