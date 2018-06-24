@@ -5,30 +5,26 @@ This project fetches Google's [earthview images](https://earthview.withgoogle.co
 ## Installation Guide (Windows):
 1. Clone this repository to your local machine
 2. Install the required dependencies by running `pip install -r requirements.txt` from the root of your cloned repository
-3. Execute `pyinstaller --clean --noconsole --name EarthviewWallpaper --add-data="prettyearth.txt;." --add-data="icon.ico;." app.py` from the root of your cloned repository
-4. Create a [shortcut](https://www.computerhope.com/issues/ch000739.htm) to "/dist/EarthviewWallpaper/EarthviewWallpaper.exe"
-5. Move the shortcut into your systems' startup folder
-    1. Press <kbd>WIN</kbd>+<kbd>R</kbd>
-    2. Type "shell:startup" and hit <kbd>ENTER</kbd>
-    3. Move the file
-6. Either execute the copied shortcut or restart your system
+3. Build by running `pyinstaller --clean --noconsole --name EarthviewWallpaper --add-data="prettyearth.txt;." --add-data="icon.ico;." app.py` from the root of your cloned repository
+4. Optional: Automatically start *EarthviewWallpaper* on login
+    1. Create a [shortcut](https://www.computerhope.com/issues/ch000739.htm) to "/dist/EarthviewWallpaper/EarthviewWallpaper.exe"
+    2. Press <kbd>WIN</kbd>+<kbd>R</kbd>
+    3. Type "shell:startup" and hit <kbd>ENTER</kbd>
+    4. Move the shortcut to this location
 
 
 ## Installation Guide (OS X):
 1. Clone this repository to your local machine
 2. Install the required dependencies by running `pip3 install -r requirements.txt` from the root of your cloned repository
-3. Build by running `python3 setup.py py2app`
+3. Build by running `python setup.py py2app` from the root of your cloned repository
 4. Move the app to your systems' application folder by running `mv dist/app.app /Applications/EarthviewWallpaper.app`
-5. Set *EarthviewWallpaper* as Login Item
-    1. Go to System Preferences -> Users & Groups
-    2. Select your user on the left
-    3. Add *EarthviewWallpaper* as Login Item
+5. Optional: Automatically start *EarthviewWallpaper* on login by running `mv local.earthviewwallpaper.agent.plist ~/Library/LaunchAgents`
 
 
 ## Open Tasks:
 * Change ALL desktops for OS X
 * Handle network errors
-* Check why OS X app is ~250MB
+* Use PyInstall on OS X, too
 
 ## Credits:
 * Icon from https://icon-icons.com/icon/earth-globe/70179
