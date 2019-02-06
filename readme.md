@@ -25,6 +25,7 @@ This project fetches Google's [earthview images](https://earthview.withgoogle.co
 * Change ALL desktops for OS X
 * Handle network errors
 * Use PyInstall on OS X, too
+* Grant permanent permission on OS X Mojave
 
 ## Credits:
 * Icon from https://icon-icons.com/icon/earth-globe/70179
